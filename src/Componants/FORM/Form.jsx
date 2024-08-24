@@ -288,12 +288,12 @@ function Form() {
     const [successMessage, setSuccessMessage] = useState('');
 
     const userSchema = Yup.object().shape({
-        firstName: Yup.string().required('This field is required'),
+        // firstName: Yup.string().required('This field is required'),
         lastName: Yup.string().required('This field is required'),
         email: Yup.string().email('Invalid email').required('Please enter a valid email address'),
-    //     firstName: Yup.string()
-    //     .min(4, 'First name must be at least 4 characters')
-    //     .required('This field is required'),
+        firstName: Yup.string()
+        .min(4, 'First name must be at least 4 characters')
+        .required('This field is required'),
     // lastName: Yup.string()
     //     .min(4, 'Last name must be at least 4 characters')
     //     .required('This field is required'),
