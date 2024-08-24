@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E7F4E4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125vh;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    height: 128vh;
+  }
+}

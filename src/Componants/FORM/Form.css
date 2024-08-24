@@ -1,0 +1,391 @@
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 1200px;
+    /* height: 700px; */
+}
+
+form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #534d4d;
+   
+    font-size: 14px;
+    margin-bottom: 8px; /* Add space below labels */
+    display: inline-block;
+}
+
+/* Styles for text input, email input, and textareas */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Flexbox for side-by-side input fields */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.checkbox-wrapper {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+
+.checkbox-wrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+
+.checkbox-wrapper:hover input ~ .custom-checkbox {
+    background-color: #f0f0f0;
+}
+
+.checkbox-wrapper input:checked ~ .custom-checkbox {
+    background-color: #0c7d69;
+    border-color: #0c7d69;
+}
+
+.custom-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-wrapper input:checked ~ .custom-checkbox:after {
+    display: block;
+}
+
+.checkbox-wrapper .custom-checkbox:after {
+    left: 5px;
+    top: 1px;
+    width: 2px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.error-message {
+    color: rgb(227, 116, 116);
+    font-size: 14px;
+    margin-top: 8px;
+    align-self: flex-start;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(12, 125, 105);
+ 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #103f2c;
+   
+}
+
+/* Style for error message */
+.error-message {
+    color: rgb(227, 116, 116); /* Red color to indicate an error */
+    font-size: 14px; /* Slightly smaller font size */
+    margin-top: 8px; 
+   
+}
+/* 
+.error-message::before {
+   
+    content: "⚠️ ";
+   
+    margin-right: 5px;
+    line-height: 30px;
+} */
+
+/* Responsive Design */
+
+/* Styles for the success message */
+.success-message {
+    background-color: #2e302f; /* Light green background */
+    color: rgb(253, 248, 248); 
+    /* padding: 10px; */
+    width: 330px;
+    border-radius: 5px;
+    margin: 0 auto; 
+    /* margin-top: -85px; */
+    position: absolute;
+    top: 20%;
+    right: 35%;
+    border: 1px solid #2e8b57; 
+    
+}
+
+/* Flex container for icon and message */
+.success-message-content {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    margin-bottom: 10px; /* Space between the icon/message and the footer text */
+    margin-left: 10px;
+    
+}
+
+/* Circular icon styles */
+.success-icon {
+    width: 22px; /* Size of the circle */
+    height: 22px; /* Size of the circle */
+    border-radius: 50%; /* Makes the icon circular */
+    /* background-color: #2e8b57;  */
+    color: #fff; /* Icon color */
+    border: 1px solid #2e8b57; /* Border color matching text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; 
+    font-size: 16px; /* Icon size */
+}
+
+/* Success message text */
+.success-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Footer message styling */
+.success-message-footer {
+    text-align: center; 
+    font-size: 12px!;
+   
+}
+
+
+
+
+/* Style for input fields with errors */
+.error-input {
+    border-color: rgb(166, 113, 113)!important;
+}
+
+
+/* Existing error message style */
+.error-message {
+    color: rgb(227, 116, 116);
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+
+/* Flexbox for radio buttons (general) */
+.radio-group {
+    display: flex;
+    flex-direction: row; /* Default to horizontal layout for larger screens */
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+    gap: 10px; /* Space between radio buttons */
+    width: 100%; /* Ensure radio group takes full width */
+}
+
+/* Style for individual radio items */
+.radio-item {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Add padding for better spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(50% - 10px); /* Full width of container minus gap */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Custom radio button styles */
+.radio-item input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.radio-item input[type="radio"]:checked {
+    border-color: rgb(12, 125, 105);
+    background-color: white;
+    position: relative;
+}
+
+/* Add inner dot to checked radio buttons */
+.radio-item input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(12, 125, 105);
+}
+
+/* Hover and active states for radio buttons */
+.radio-item:hover,
+.radio-item:active {
+    border: 1px solid hsl(169, 82%, 27%);
+    background-color: hsl(148, 38%, 91%);
+}
+
+/* Styles for extra large screens */
+@media (min-width: 1024px) {
+    .success-message {
+        top: 30px; /* Adjust top offset for extra large screens */
+        /* right: 30px;  */
+        width: 400px; /* Larger width for extra large screens */
+        padding: 15px; /* Increase padding */
+    }
+
+    .success-icon {
+        width: 30px; /* Larger icon size */
+        height: 30px; /* Larger icon size */
+        font-size: 20px; /* Larger icon font size */
+    }
+
+    .success-text {
+        font-size: 16px; /* Larger text size */
+    }
+
+    .success-message-footer {
+        font-size: 14px; /* Larger footer text size */
+    }
+}
+@media (max-width: 768px) {
+    
+    .form-container{
+        width: 100%;
+        display: block;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        margin-bottom: 10px;
+    }
+}
+/* Styles for larger screens */
+@media (min-width: 769px) {
+    .success-message {
+        top: 37px; 
+        left: 35%;
+     
+        width: 300px; 
+        padding: 10px; 
+    }
+
+    .success-icon {
+        width: 22px; /* Default icon size */
+        height: 22px; /* Default icon size */
+        font-size: 16px; /* Default icon font size */
+    }
+
+    .success-text {
+        font-size: 14px; /* Default text size */
+    }
+
+    .success-message-footer {
+        font-size: 12px; /* Default footer text size */
+    }
+}
+
+@media (max-width: 768px) {
+    .success-message {
+        top: 10px; 
+    
+        right: 19%;
+        
+        width: 300px; 
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .success-message {
+        top: 5px; /* Further adjust top offset */
+        right: 1px; 
+        width: 270px; /* Full width on very small screens */
+    }
+
+    .success-icon {
+        width: 18px; /* Smaller icon size */
+        height: 18px; /* Smaller icon size */
+        font-size: 14px; /* Smaller icon font size */
+    }
+
+    .success-text {
+        font-size: 12px; /* Smaller text size */
+    }
+.success-message-content{
+    display: block;
+}
+    .success-message-footer {
+        font-size: 10px; /* Even smaller footer text size */
+    }
+}
+
+/* Responsive Design for screens smaller than 768px */
+@media (max-width: 768px) {
+    .radio-group {
+        flex-direction: column; /* Stack radio buttons vertically */
+        gap: 10px; /* Space between radio buttons */
+        width: 100%; /* Full width of container */
+    }
+
+    .radio-item {
+        width: 100%; /* Full width of container */
+        margin-right: 0; /* Reset margin-right */
+        margin-bottom: 10px; /* Add space below radio items */
+    }
+}
+
+
+
+
