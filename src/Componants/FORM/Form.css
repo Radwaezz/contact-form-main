@@ -347,11 +347,12 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    
     .success-message {
-        top: 5px; /* Further adjust top offset */
-        right: 1px; 
-        width: 270px; /* Full width on very small screens */
+        top: 5px; /* Adjust top offset */
+        right: 60px; /* Adjust right offset to fit within the viewport */
+        width: 90%; /* Adjust width for very small screens */
+        max-width: 300px; /* Ensure it doesn't exceed a maximum width */
+        padding: 10px; /* Add padding for better spacing */
     }
 
     .success-icon {
@@ -362,10 +363,14 @@ button:hover {
 
     .success-text {
         font-size: 12px; /* Smaller text size */
+        /* margin-left: 5px;  */
     }
-.success-message-content{
-    display: block;
-}
+
+    .success-message-content {
+        display: flex; /* Use Flexbox for horizontal alignment */
+        align-items: center; /* Center align items vertically */
+    }
+
     .success-message-footer {
         font-size: 10px; /* Even smaller footer text size */
     }
